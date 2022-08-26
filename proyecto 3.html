@@ -1,0 +1,64 @@
+<section id="sect">
+    <div class="midl">
+        <div>
+        <h1>Color Aleatorio</h1>
+        </div>
+        <button id="btnClear">Cambiar color</button>
+        <p id="contarClick"></p>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+        
+    var btnClear = document.getElementById('btnClear'),
+        pElm = document.getElementById('contarClick')
+        sect = document.getElementById('sect');
+        contar = 0;
+    
+        const sbg = function(){
+            const randColor = Math.floor(Math.random() * 16777215).toString(16);
+            sect.style.backgroundColor = "#" + randColor;
+            pElm.textContent = "Background color "+ randColor;
+        }
+    
+    btnClear.onclick = function(){
+        sbg();
+    }
+</script>
+
+
+
+
+<style>
+        h1{text-align: center;font-size: 45px;text-shadow: 0 1px white;}
+        section{
+            text-align: center;
+            margin: auto;
+            padding: 350px 0;
+            transition: all .5s;
+        }
+        button{
+            border: none;
+            background-color: tomato;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: brown;
+        }
+        #contarClick{
+            font-size: 85px;
+            font-weight: 800;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px auto;
+            background-color: aliceblue;
+            width: fit-content;
+            padding: 15px 40px;
+            border: none;
+        }
+    </style>
