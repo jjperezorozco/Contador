@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Proyecto 1</title>
+        <script>
+            //funcion para ordenar los campos y valores
+            function ordenamiento(inicio){
+                let array = Object.entries(inicio)//se convierte el objeto en un array
+                let array0 = array.sort()//se ordena el array alfabeticamente por cada key
+                let array1 = array0.toString();
+                return array1
+            }
+
+            //aca se define el objeto inicial y se muestran las matrices resultantes
+            let uno = {z:1, c:2, s:3}
+            let array2 = ordenamiento(uno)
+            
+            alert("Campos: ["+ array2.slice(0,5)+"], Valores["+array2.slice(6,12)+"]")
+        </script>
+    </head>
+    <body>
+        <h1>Funcion de ordenamiento</h1>
+        <p>Crear una función que tome un objeto y devuelva los campos y los valores como matrices separadas.</p>
+        <p>Devuelve los campos ordenados alfabéticamente, y sus correspondientes valores en el mismo orden.</p>
+        <p>Se reciben keys and values ({z:1, c:2, s:3}) y se entregan matrices separadas con los valores ordenados</p>
+    </body>
+</html>
